@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#deleteAll{
+  z-index: 999;
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #ff9900;
+  border: 2px solid red;
+  cursor: pointer;
+}
+#deleteAll:hover{
+  background-color: rgb(14, 218, 191);
+  color: #000;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #9ACD32;
+
+  .left{
+    width: 30%;
+    h3{
+      font-size: 1.8rem;
+    }
+  }
+  .right{
+    display: flex;
+    width: 60vw;
+    column-gap: 15px;
+    font-size: 1.2rem;
+
+    button{
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      padding: 0px 5px;
+    }
+    button:hover{
+      transform: scale(0.9);
+      background-color: #FFDEAD;
+    }
+  }
+}
+
+.dark-mode {
+  transition: all 0.5s;
+  background-color: rgba(37, 32, 32, 0.835);
+  color: white;
+  header{
+    background-color: #CD853F;
+    h3{
+      color: #000;
+    }
+  }
+}
+
+/* ----------------------page1------------------------------------- */
+#page1{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px #00000091;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 15px 0px;
+
+    input, select, button{
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      outline: none;
+    }
+    button{
+      background-color: #CD853F;
+      cursor: pointer;
+      font-weight: bolder;
+      padding: 13px;
+      border: none;
+    }
+    button:hover{
+      background-color: #ff9900;
+      transition: 0.5s;
+    }
+  }
+
+  #dataContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+.dataDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: cadetblue;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.edit{
+  padding: 7px 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.deleteData{
+  padding: 7px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+.deleteData:hover{
+  background-color: rgb(206, 120, 16);
+  color: aliceblue;
+  transition: all 0.5s;
+}
+
+/* -----------------------page-2---------------------------------- */
+#page2{
+  position: relative;
+  height: 90vh;
+  border-radius: 5px;
+  margin: 15px 30px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px #00000091;
+
+  h3{
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+  .pie{
+    margin: auto;
+    width: 30vw;
+    
+  }
+}
+
+/* -------------------------------page3----------------------------------------- */
+#page3{
+  border-radius: 5px;
+  margin: 15px 30px;
+  padding: 30px 20px;
+  box-shadow: 0px 0px 15px #00000091;
+
+  h2{
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  p{
+    font-size: 1.3rem;
+  }
+}
+
+/* ------------------------------page4----------------------------------------- */
+
+#page4{
+  border-radius: 5px;
+  margin: 15px 30px;
+  padding: 30px 20px;
+  box-shadow: 0px 0px 15px #00000091;
+
+  #calculator{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    width: 40vw;
+    background-color: rgb(13, 122, 111);
+
+    input, button{
+      padding: 10px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    }
+    button{
+      background-color: #CD853F;
+      cursor: pointer;
+      font-weight: bolder;
+      padding: 12px;
+      border: none;
+    }
+    button:hover{
+      background-color: #ff9900;
+      transition: 0.5s;
+    }
+
+    #totalIncom{
+      margin-top: 9px;
+    }
+
+    table{
+      border-collapse: collapse;
+      td, th{
+        border: 1px solid #000;
+        text-align: center;
+        padding: 10px 0px;
+      }
+    }
+  }
+}

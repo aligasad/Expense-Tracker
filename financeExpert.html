@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Finance Expert</title>
+  <link rel="stylesheet" href="financeExpert.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  
+  <div id="main">
+    <div id="front">
+      <h1 id="text">Chat with expert</h1>
+      <div class="bottom">
+        <p>Get Expert Financial Advice for Only $20! Chat with a Professional Today.</p>
+        <button id="payment">Pay Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="back">
+    <div class="container1">
+      <div class="head">
+        <p>This payment link is created in <strong>Test Mode.</strong> Only test payments can be made for this.</p>
+      </div>
+      <div class="bottom">
+        <h3>Payment Request from KISHLAY CHANDAN</h3>
+        <div>
+          <p>PAYMENT FOR</p>
+          <p>Expert Advisor </p>
+        </div>
+        <div>
+          <p>AMOUNT PAYABLE</p>
+          <p>INR 500.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="part1">
+        <h3 class="logo">&#8491;</h3>
+        <h3>ASAD ALAM</h3>
+      </div>
+      <div class="part2">
+        <div class="content">
+          <div>&#10004;</div>
+          <h4>Payment Completed</h4>
+          <p>You have successfully paid INR 500.00</p>
+          <p>Payment ID: OruXine2F447Ce</p>
+        </div>
+      </div>
+    </div>
+    <div class="container3"></div>
+  </div>
+
+  <script>
+    const paymentBtn = document.querySelector("#payment");
+    const mainDiv = document.querySelector("#main");
+    const backDiv = document.querySelector("#back");
+
+    paymentBtn.addEventListener('click', ()=>{
+      mainDiv.style.display = "none";
+      backDiv.style.display = "block";
+    })
+  </script>
+</body>
+</html>

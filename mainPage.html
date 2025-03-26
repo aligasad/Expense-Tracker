@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="mainPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <i class="fa-solid fa-bars" id="bars"></i>
+        <div class="top">
+          <h4>Menu</h4>
+          <i class="fa-solid fa-xmark" id="cross"></i>
+        </div>
+      </div>
+      <div class="right"><h3 id="logOut">Logout</h3></div>
+    </header>
+
+    <div id="main">
+      <div class="sideBar">
+        <div class="bottom">
+          <button onclick="changeSrc('generalPurpose.html')">General Purpose</button>
+          <button onclick="changeSrc('startUp.html')">StartUp Companies</button>
+          <button onclick="changeSrc('aiSupport1.html')">AI Support (24*7)</button>
+          <button onclick="changeSrc('expensesNotes.html')">My Expenses Notes</button>
+          <button onclick="changeSrc('financeExpert.html')">Chat with finance expert</button>
+        </div>
+      </div>
+      <iframe src="generalPurpose.html" class="contentBar" id="myiFrame"></iframe>
+    </div>
+
+    <script src="functions.js"></script>
+    <script>
+      checkLogin();
+      const cross = document.querySelector("#cross");
+      const sideBar = document.querySelector('.sideBar');
+      const bars = document.querySelector("#bars");
+      const t = document.querySelector('.top');
+      const logOut = document.querySelector('#logOut');
+
+      const myiFrame = document.querySelector('#myiFrame');
+
+      function changeSrc(currSrc){
+        myiFrame.src = currSrc;
+      }
+
+
+      logOut.addEventListener('click', ()=>{
+        window.location.href = 'index.html';
+        localStorage.removeItem("loginId");
+      })
+      
+      cross.addEventListener('click', ()=>{
+        sideBar.style.display = "none";
+        bars.style.display = "block";
+        t.style.display = 'none';
+      });
+      
+      bars.addEventListener('click', ()=>{
+        sideBar.style.display = "block";
+        t.style.display = 'flex';
+        bars.style.display = "none";
+      })
+    </script>
+  </body>
+</html>

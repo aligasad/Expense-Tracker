@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: linear-gradient(to right, rgb(93, 90, 90), white);
+}
+
+#top{
+  display: flex;
+  align-items: center;
+  height: 150px;
+  padding: 0px 30px;
+  
+  #btn{
+    width: 20%;
+    margin: auto;
+    button{
+      width:  70px;
+      height: 70px;
+      border: none;
+      box-shadow: 0px 0px 5px #000;
+      border-radius: 50px;
+      font-size: 2.5rem;
+      cursor: pointer;
+      animation: scaleUp 2s linear infinite;
+    }
+  }
+  #addNote:hover{
+    background-color: bisque;
+    border: 2px solid #000;
+  }
+
+  #headingText{
+    width: 80%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    animation: rotateText 4s linear infinite;
+  }
+
+  
+}
+
+
+@keyframes rotateText {
+  0% {
+      margin-left: 0;
+      color: red;
+  }
+  25% {
+      margin-left: 100px;
+      color: antiquewhite;
+  }
+  50% {
+      margin-left: 200px;
+      color: rgb(187, 106, 0);
+  }
+  75% {
+      margin-left: 100px;
+      color: rgb(232, 4, 4);
+  }
+  100% {
+      margin-left: 0;
+      color: rgb(193, 117, 18);
+  }
+}
+
+@keyframes scaleUp {
+  0%{
+    transform: scale(1);
+    background-color: red;
+  }
+  50%{
+    transform: scale(1.2);
+    background-color: aquamarine;
+  }
+  100%{
+    transform: scale(1);
+    background-color: red;
+  }
+}
+
+
+
+
+
+
+
+
+.noteDiv{
+  display: none;
+}
+
+.noteWriter{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(214, 168, 0);
+  width: 280px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding:5px 15px;
+  border-radius: 10px;
+  z-index: 999;
+
+  textarea{
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  button{
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid red;
+  }
+}
+.div{
+  position: relative;
+  box-shadow: 0px 0px 5px #000;
+  border-radius: 10px;
+  padding: 15px 8px;
+  width: 300px;
+  min-height: 30px;
+  margin: auto;
+  
+}
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#notesContainer{
+  display: flex;
+}

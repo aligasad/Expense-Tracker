@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses App</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div id="background-style"></div>
+  <header id="header"> 
+    <div class="left"><a href="index.html"><button>HOME</button></a></div>
+    <div class="right">
+      <div id="toggle"> <div id="circle" onclick="darkMode()"></div> </div>
+      <button id="signUpLogin" onclick="loginDisplay()"><span class="sign">signUp & Login</span> <span class="arrow"> > </span></button>
+    </div>
+  </header>
+  <div id="wrapper">
+
+    <div id="loginPage">
+      <!-- <div id="close">X</div> -->
+      <h3>LOGIN</h3>
+      <form action="" id="form1">
+        <input required type="text" placeholder="Enter your name...">
+        <input required  type="password" placeholder="Password">
+        <button id="submitBtn" type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <span id="signUp">Sign up</span></p>
+    </div>
+
+    <div id="signUpPage">
+      <h3>SIGN UP</h3>
+      <form class="grid gap-8" id="form2"  action="">
+        <input placeholder="Name" type="text">
+        <input placeholder="Phone Number" type="number">
+        <input placeholder="Email" type="email">
+        <input placeholder="Username" type="text">
+        <input placeholder="Password" type="password">
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account <span id="login">Login</span></p>
+    </div>
+
+    <div id="midDiv">
+      <h1>Track Your Expenses Effortlessly</h1>
+      <p>Stay on top of your finances with our intuitive expense tracker.</p>
+      <button id="startBtn">Get Started</button>
+    </div>
+  </div>
+
+
+  <script src="functions.js"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>

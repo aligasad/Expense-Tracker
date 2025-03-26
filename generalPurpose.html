@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Purpose</title>
+  <link rel="stylesheet" href="generalPurpose.css">
+</head>
+<body>
+  <button id="deleteAll">Delete All</button>
+  <header>
+    <div class="left"> <h3>Daily Finance Management</h3></div>
+    <div class="right">
+      <a href="#page1">Expense Tracker</a>
+      <a href="#page2">Data Visualization</a>
+      <a href="#page3">AI Financial Advisor</a>
+      <a href="#page4">Taxes Calculator</a>
+      <button onclick="darkMode()">Dark Mode</button>
+    </div>
+  </header>
+
+  <div id="page1">
+    <h2>Expense Tracker</h2>
+    <form action="">
+      <input required id="nameP" type="text" placeholder="Description">
+      <input required id="amount" type="number" placeholder="Amount">
+      <select required name="" id="item">
+        <option disabled selected>Select</option>
+        <option value="groceries" >Groceries</option>
+        <option value="utlities">Utlities</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="study">Study</option>
+        <option value="medical">Medical</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div id="dataContainer"></div>
+  </div>
+
+  <div id="page2">
+    <h3>Data Visualization</h3>
+    <div class="pie">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <div id="page3">
+    <h2>AI Financial Advisor</h2>
+    <p>Consider reducing your average spending. ☹️</p>
+  </div>
+
+  <div id="page4">
+    <h2>Taxes Calculator</h2>
+    <div id="calculator">
+      <input id="incomeInput" type="number" placeholder="Enter your total income">
+      <button id="calculateTax">Calcualte Tax</button>
+      <p id="totalIncome">Total income: ₹0.00</p>
+      <p id="taxRate">Tax Rate: 0%</p>
+
+      <table>
+        <tr>
+          <th>Income Threshold</th>
+          <th>Tax Rate</th>
+        </tr>
+        <tr>
+          <td>Income above ₹1000000.00</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Income above ₹700000.00</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Income above ₹500000.00</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Income above ₹300000.00</td>
+          <td>5%</td>
+        </tr>
+      </table>
+
+      <p id="taxToPay">Tax to Pay: ₹ 0.00</p>
+      <p id="afterTaxIncome">Amount left after tax: ₹ 0.00</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="generalPurpose.js"></script>
+</body>
+</html>

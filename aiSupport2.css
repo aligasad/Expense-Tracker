@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main{
+  display: flex;
+}
+
+#left{
+  width: 20vw;
+  height: 100vh;
+  background-color: red;
+}
+
+#right{
+  width: 80vw;
+  height: 100vh;
+  background-color: aquamarine;
+}

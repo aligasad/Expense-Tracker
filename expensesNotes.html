@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Notes</title>
+  <link rel="stylesheet" href="expensesNotes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <div id="top">
+    <div id="btn"><button id="addNote"><i class="fa-solid fa-plus"></i></button></div>
+    <div id="headingText"><i class="fa-solid fa-pencil"></i> Expense Notes</div>
+  </div>
+
+  <div class="noteDiv">
+    <div class="noteWriter">
+      <textarea name="" id="textarea"></textarea>
+      <label for="background">Background Color</label>
+      <input type="color" id="background" value="#ff38ff">
+      <label for="font" >Font Color</label>
+      <input type="color" id="font" value="#000000">
+      <div>
+        <button id="saveBtn">Save</button>
+        <button id="closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="notesContainer"></div>
+
+  <script src="expensesNotes.js"></script>
+</body>
+</html>
