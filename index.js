@@ -118,7 +118,7 @@ function loginDisplay() {
 
 // ---------{ B A C K G R O U N D - - - A N I M A T I O N }----------------------- */
 const bgAnimation = document.getElementById('bgAnimation');
-const numberOfColorBoxes = 400;
+const numberOfColorBoxes = 810;
 for (let i = 0; i < numberOfColorBoxes; i++) {
     const colorBox = document.createElement('div');
     colorBox.classList.add('colorBox');

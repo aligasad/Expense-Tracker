@@ -14,13 +14,12 @@ window.addEventListener("load",()=>{
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const obj = {
-    id: uniqueId,
+    id: uniqueId++,
     name: elements[0].value,
     amount: elements[1].value,
     item: elements[2].value,
   };
 
-  uniqueId++;
   // adding data into leaderBoard
   leaderBoard.push(obj);
   localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
@@ -101,7 +100,6 @@ function clearForm() {
   elements.forEach((elem) => {
     elem.value = "";
   });
-  elements[0].focus();
 }
 
 function sortLeaderBoard() {
@@ -172,19 +170,17 @@ function darkMode() {
 
 
 // ------------DELETE ALL NOTES---------------------------
-
 const deleteAllData = document.querySelector("#deleteAll");
 
 deleteAllData.addEventListener('click', ()=>{
-<<<<<<< HEAD
   alert("Are you sure you want to delete all expenses?");
-=======
-   alert("Are you sure you want to delete all expenses?");
->>>>>>> 665e89e1ffa7449cc108864799eee55a0f9af89a
   // deleting all data from localStorege
   leaderBoard = [];
   // pushing empty array to localStorage
   localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
+
+  // reset graph
   showGraph();
+  // reset data Container
   printLeaderBoard();
 })

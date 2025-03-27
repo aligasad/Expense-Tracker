@@ -127,6 +127,13 @@ header{
   border-radius: 5px;
   font-weight: bolder;
   margin-right: 20px;
+  
+}
+.edit:hover{
+  background-color: rgb(206, 120, 16);
+  color: aliceblue;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .deleteData{
@@ -135,6 +142,7 @@ header{
   border: none;
   border-radius: 5px;
   font-weight: bolder;
+  cursor: pointer;
 }
 .deleteData:hover{
   background-color: rgb(206, 120, 16);

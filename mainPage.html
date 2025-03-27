@@ -50,11 +50,15 @@
       function changeSrc(currSrc){
         myiFrame.src = currSrc;
       }
-      
+       
+      logOut.innerHTML = loginUsername + `  <i class="fa-solid fa-right-from-bracket"></i>`;
+
       logOut.addEventListener('click', ()=>{
         window.location.href = 'index.html';
         localStorage.removeItem("loginId");
       })
+
+      
       
       cross.addEventListener('click', ()=>{
         sideBar.style.display = "none";
