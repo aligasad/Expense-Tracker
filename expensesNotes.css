@@ -14,19 +14,23 @@ body{
 #top{
   display: flex;
   align-items: center;
-  height: 150px;
+  height: 100px;
   padding: 0px 30px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: linear-gradient(to left, #DC143C, #6495ED, #5F9EA0, #A52A2A, #F5F5DC, #CD5C5C, #CD5C5C, #DC143C);
   
   #btn{
     width: 20%;
-    margin: auto;
+    display: flex;
+    justify-content: end;
     button{
-      width:  70px;
-      height: 70px;
+      width:  50px;
+      height: 50px;
       border: none;
       box-shadow: 0px 0px 5px #000;
       border-radius: 50px;
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       cursor: pointer;
       animation: scaleUp 2s linear infinite;
     }
@@ -38,7 +42,7 @@ body{
 
   #headingText{
     width: 80%;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
     animation: rotateText 4s linear infinite;
@@ -51,7 +55,7 @@ body{
 @keyframes rotateText {
   0% {
       margin-left: 0;
-      color: red;
+      color: rgb(174, 255, 0);
   }
   25% {
       margin-left: 100px;
@@ -63,7 +67,7 @@ body{
   }
   75% {
       margin-left: 100px;
-      color: rgb(232, 4, 4);
+      color: rgb(4, 232, 221);
   }
   100% {
       margin-left: 0;
@@ -102,7 +106,7 @@ body{
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(214, 168, 0);
+  background-color: #3CB371;
   width: 280px;
   height: 340px;
   display: flex;
@@ -120,13 +124,24 @@ body{
     resize: none;
     outline: none;
     border-radius: 10px;
+    background-color: #caffe3;
+    box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #000;
+
   }
 
   button{
     padding: 3px 8px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    background-color: #DC143C;
+    box-shadow: inset 0 0 5px #000;
+    margin-right: 10px;
+  }
+  button:hover{
+    color: rgb(0, 0, 0);
+    background-color: #f96400;
   }
 }
 .div{

@@ -30,7 +30,7 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: aquamarine;
+  background-color: #3CB371;
 
   .left{
     width: 30%;
@@ -50,6 +50,8 @@ header{
       border: none;
       cursor: pointer;
       padding: 0px 5px;
+      box-shadow: 0 0 5px #000;
+      width: 130px;
     }
     button:hover{
       transform: scale(0.9);
@@ -63,9 +65,29 @@ header{
   background-color: #696969;
   color: #fff7e1;
   header{
-    background-color: #DAA520;
+    background-color: #D2B48C;
     h3{
       color: #000;
+    }
+  }
+  #page1{
+    button{
+      background-color: #D2B48C;
+    }
+    button:hover{
+      background-color: #e1a454;
+      color: white;
+    }
+  }
+  #page4{
+    #calculator{
+      button{
+        background-color: #D2B48C;
+      }
+      button:hover{
+        background-color: #e1a454;
+        color: white;
+      }
     }
   }
 }
@@ -92,14 +114,15 @@ header{
       outline: none;
     }
     button{
-      background-color: #007b9a;
+      background-color: #3CB371;
       cursor: pointer;
       font-weight: bolder;
       padding: 13px;
       border: none;
     }
     button:hover{
-      background-color: #00a3cb;
+      background-color: #236541;
+      color: white;
       transition: 0.5s;
     }
   }
@@ -214,14 +237,15 @@ header{
       border: none;
     }
     button{
-      background-color: #007b9a;
+      background-color: #3CB371;
       cursor: pointer;
       font-weight: bolder;
       padding: 13px;
       border: none;
     }
     button:hover{
-      background-color: #00a3cb;
+      background-color: #00a249;
+      color: white;
       transition: 0.5s;
     }
 

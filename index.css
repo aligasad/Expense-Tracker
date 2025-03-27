@@ -69,22 +69,21 @@ body{
   padding: 15px 100px;
   border-bottom-right-radius: 70px;
   border-bottom-left-radius: 70px;
-  background: linear-gradient(to left,rgb(0, 216, 155), rgb(255, 77, 0), rgb(161, 201, 0));
+  background: linear-gradient(to left, #DC143C, #6495ED, #5F9EA0, #A52A2A, #F5F5DC, #CD5C5C, #CD5C5C, #DC143C, #6495ED, #5F9EA0, #A52A2A, #F5F5DC);
 
   .left{
     button{
       padding: 5px 15px;
       border-radius: 5px;
       border: none;
-      background-color: #DC143C;
       font-size: 1.3rem;
-      color: white;
+      color: black;
       cursor: pointer;
     }
     button:hover{
-      border: 2px solid #DC143C;
+      border: 2px solid black;
       padding: 3px 13px;
-      background-color: white;
+      background-color: #00999f;
       color: black;
 
     }
@@ -97,20 +96,22 @@ body{
     width: 22vw;
   
     #toggle{
-      background-color: rgb(152, 128, 128);
+      background-color: rgb(0, 123, 82);
       width: 60px;
       height: 30px;
       display: flex;
       align-items: center;
       padding: 4px 8px;
       border-radius: 5px;
+      box-shadow: inset 0px 0px 5px #000, 0px 0px 5px #000;
     
       #circle{
         width: 20px;
         height: 20px;
         border-radius: 15px;
         cursor: pointer;
-        background-color: black;
+        background-color: #DC143C;
+        box-shadow: inset 0px 0px 8px #000;
       }
     }
 }
@@ -168,13 +169,33 @@ body{
       -webkit-text-fill-color: transparent;
     }
   }
+  #signUpLogin{
+    background-color: #B8860B;
+  }
+  #midDiv{
+    button{
+      background-color: #B8860B;
+    }
+  }
+  .left{
+    button{
+      background-color: #B8860B;
+    }
+  }
+
+  .backgroundAmim{
+    background: #F4A460;
+  }
+  .colorBox:hover{
+    background: #F4A460;
+  }
 }
 
 /* -------------------------------LOGIN PAGE------------------------------------------------ */
 
 #loginPage{
   display: none;
-  background-color: #8FBC8F;
+  background-color: #CD5C5C;
   border-radius: 10px;
   position: fixed;
   top: 50%;
@@ -182,13 +203,6 @@ body{
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 30px 20px;
-
-  #close{
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    cursor: pointer;
-  }
 
   #signUp{
     cursor: pointer;
@@ -210,29 +224,38 @@ body{
       border: 2px solid #000;
       outline: none;
       font-weight: bolder;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      
     }
     input{
       padding: 8px 20px;
+      box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #000;
     }
     button{
       border-radius: 5px;
       background-color: rgb(0, 123, 82);
-      padding: 12px 20px;
+      padding: 10px 20px;
       color: white;
       border: none;
+      margin-top: 10px;
       transition: background-color 0.5s;
+      box-shadow: 0px 0px 5px #000;
     }
     input:hover{
       border-color: blue;
     }
 
     button:hover{
-      background: linear-gradient(to left, blue, white);
+      background: linear-gradient(to left, #5F9EA0, #A52A2A, #F5F5DC, #556B2F);
+      color: #000;
+      transition: all 0.5s;
     }
   }
 }
 
-
+/* ---------------_--------SIGN UP PAGE --------------------------- */
 #signUpPage{
   display: none;
   text-align: center;
@@ -243,7 +266,7 @@ body{
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #556B2F;
+  background-color: #DC143C;
   form{
     display: grid;
     row-gap: 10px;
@@ -251,6 +274,10 @@ body{
     
     input{
       padding: 8px 20px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #000;
     }
     button{
       padding: 10px 20px;
@@ -258,18 +285,23 @@ body{
       border: none;
       border-radius: 5px;
       font-weight: bolder;
+      color: white;
+      margin-top: 10px;
       background-color: rgb(0, 123, 82);
+      box-shadow: 0 0 5px #000;
     }
     button:hover{
-      background: linear-gradient(to left, rgb(0, 158, 123), rgba(184, 4, 4, 0.68));
+      background: linear-gradient(to left, #6495ED,#B8860B, #2F4F4F);
+      color: black;
+      transition: all 0.5s;
     }
   }
   #login{
     cursor: pointer;
-    font-weight: bolder;
+    text-decoration: underline;
+    color: #00ffff;
   }
   #login:hover{
-    font-weight: bolder;
     color: white;
   }
 }
