@@ -37,20 +37,20 @@
 
     <script src="functions.js"></script>
     <script>
+      // if a user does not login then he/she directed on login page i.e. index.html
       checkLogin();
+
       const cross = document.querySelector("#cross");
       const sideBar = document.querySelector('.sideBar');
       const bars = document.querySelector("#bars");
       const t = document.querySelector('.top');
       const logOut = document.querySelector('#logOut');
-
       const myiFrame = document.querySelector('#myiFrame');
 
       function changeSrc(currSrc){
         myiFrame.src = currSrc;
       }
-
-
+      
       logOut.addEventListener('click', ()=>{
         window.location.href = 'index.html';
         localStorage.removeItem("loginId");

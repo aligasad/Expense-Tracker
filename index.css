@@ -10,15 +10,57 @@ body{
   transition: background-color 0.5s;
 }
 
-#background-style {
-  position: fixed;
+/* ---------{ B A C K G R O U N D - - - A N I M A T I O N }----------------------- */
+.bgAnimation{
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20,1fr);
+  grid-template-rows: repeat(20,1fr);
+  background: #1d1d1d;
+  filter: saturate(2);
+  overflow: hidden;
   z-index: -1;
 }
+
+.colorBox{
+  z-index: -2;
+  filter: brightness(1.1);
+  transition: 2s ease;
+  position: relative;
+  margin: 2px;
+  background: #1d1d1d;
+}
+
+.colorBox:hover{
+  background: #b41500;
+  transition-duration: 0s;
+}
+
+.backgroundAmim{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #ff1e00;
+  filter: blur(60px);
+  animation: animBack 6s linear infinite;
+  z-index: -3;
+}
+
+@keyframes animBack {
+  0%{
+      top: -60px;
+  }
+  100%{
+      top: 120%;
+  }
+}
+/* ------------------------------------------------------------------------- */
 
 #header{
   display: flex;
@@ -27,7 +69,7 @@ body{
   padding: 15px 100px;
   border-bottom-right-radius: 70px;
   border-bottom-left-radius: 70px;
-  background: linear-gradient(to left,rgba(255, 255, 0, 0.617), rgba(255, 0, 0, 0.579));
+  background: linear-gradient(to left,rgb(0, 216, 155), rgb(255, 77, 0), rgb(161, 201, 0));
 
   .left{
     button{
@@ -37,6 +79,7 @@ body{
       background-color: #DC143C;
       font-size: 1.3rem;
       color: white;
+      cursor: pointer;
     }
     button:hover{
       border: 2px solid #DC143C;
@@ -113,11 +156,16 @@ body{
 }
 
 .dark-mode {
-  background-color: black;
-  color: white;
   #midDiv{
     p{
       color: white;
+      transition: all 0.1s;
+    }
+    h1{
+      transition: all 0.1s;
+      background: linear-gradient(to right, #e700df, #02cb0f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
@@ -233,16 +281,16 @@ body{
   width: 600px;
   height: 340px;
   border-radius: 10px;
-  background: linear-gradient(to right, rgba(156, 156, 194, 0.562), rgba(0, 0, 127, 0.498));
+  background: linear-gradient(to right, rgba(156, 156, 194, 0.353), rgba(0, 0, 127, 0.292));
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: inset 0px 0px 5px #000, -1px -1px 5px #000;
 
   h1{
     background: linear-gradient(to right, #2eb900, #cb5902);

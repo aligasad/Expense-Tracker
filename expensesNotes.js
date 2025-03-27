@@ -32,16 +32,18 @@ saveNote.addEventListener('click', ()=>{
     bgCol: bgColor.value,
     txtCol: txtColor.value
   }
-  dataArr.push(obj);
-  localStorage.setItem("notesData", JSON.stringify(dataArr));
 
+  // check if textarea is empty or fill with text before save
   if (textarea.value.trim() === "") {
-      alert("This field is required!");
-      textarea.focus();
-  } else {
-      displayNotes();
-      noteDiv.style.display = "none";
-      textarea.value = "";
+    alert("This field is required!");
+    textarea.focus();
+  } 
+  else {
+    dataArr.push(obj);
+    localStorage.setItem("notesData", JSON.stringify(dataArr));
+    displayNotes();
+    noteDiv.style.display = "none";
+    textarea.value = "";
   }
   
 })
@@ -61,6 +63,7 @@ function displayNotes() {
     close.addEventListener('click', ()=> deleteData(obj.id));
 
     const para = document.createElement('p');
+    para.classList.add('para');
     para.innerText = obj.para;
     para.style.color = txtColor.value;
   

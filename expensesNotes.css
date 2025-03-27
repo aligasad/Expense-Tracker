@@ -131,7 +131,7 @@ body{
 }
 .div{
   position: relative;
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000, inset 0 0 5px #000;
   border-radius: 10px;
   padding: 15px 8px;
   width: 300px;
@@ -142,11 +142,23 @@ body{
 .close{
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 8px;
   font-weight: bolder;
   cursor: pointer;
+  background: linear-gradient(to left, rgb(0, 0, 0), yellow, rgb(0, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para{
+  font-size: 0.8rem;
 }
 
 #notesContainer{
+  width: 100%;
   display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }

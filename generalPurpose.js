@@ -176,7 +176,11 @@ function darkMode() {
 const deleteAllData = document.querySelector("#deleteAll");
 
 deleteAllData.addEventListener('click', ()=>{
+<<<<<<< HEAD
   alert("Are you sure you want to delete all expenses?");
+=======
+   alert("Are you sure you want to delete all expenses?");
+>>>>>>> 665e89e1ffa7449cc108864799eee55a0f9af89a
   // deleting all data from localStorege
   leaderBoard = [];
   // pushing empty array to localStorage

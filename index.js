@@ -1,20 +1,20 @@
+// if a user already login then he/she directed on mainPage
 alreadyLogin();
 
 const toggleDot = document.querySelector("#toggle");
 
 const loginPage = document.querySelector("#loginPage");
-const closeLoginPage = document.querySelector("#close");
 
 const signUpPage = document.querySelector("#signUpPage");
 
-const form1 = document.querySelector("#form1");
-const form2 = document.querySelector("#form2");
+const form1 = document.querySelector("#form1"); // Login Page
+const form2 = document.querySelector("#form2"); // SignIn Page
 
-const signUp = document.querySelector("#signUp");
+const signUp = document.querySelector("#signUp"); 
 
 const login = document.querySelector("#login");
 
-const middleDiv = document.querySelector("#midDiv");
+const middleDiv = document.querySelector("#midDiv"); // for UI
 const startBtn = document.querySelector('#startBtn');
 const backgroundStyle = document.querySelector("#background-style");
 
@@ -82,7 +82,7 @@ form2.addEventListener("submit", (e) => {
 
   signUpPage.style.display = "none";
   loginPage.style.display = "block";
-  
+
 });
 
 form1.addEventListener("submit", (e) => {
@@ -114,3 +114,14 @@ function loginDisplay() {
   loginPage.style.display = "block";
   middleDiv.style.display = "none";
 }
+
+
+// ---------{ B A C K G R O U N D - - - A N I M A T I O N }----------------------- */
+const bgAnimation = document.getElementById('bgAnimation');
+const numberOfColorBoxes = 400;
+for (let i = 0; i < numberOfColorBoxes; i++) {
+    const colorBox = document.createElement('div');
+    colorBox.classList.add('colorBox');
+    bgAnimation.append(colorBox)
+}
+// ---------------------------------------------------------------------------
