@@ -88,7 +88,9 @@ header{
         color: white;
       }
     }
-    
+  }
+  .dataDiv{
+    border-left: 8px solid #b16d6d;
   }
 }
 
@@ -138,9 +140,11 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: cadetblue;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow:  0 0 10px #414040;
+  border-left: 8px solid #CD853F;
 }
 
 .edit{
@@ -150,14 +154,16 @@ header{
   border-radius: 5px;
   font-weight: bolder;
   margin-right: 20px;
+  background-color: #CD853F;
   
 }
-.edit:hover{
-  background-color: rgb(206, 120, 16);
+.edit:hover, .deleteData:hover{
+  background-color: #ff9900;
   color: aliceblue;
   transition: all 0.5s;
   cursor: pointer;
 }
+
 
 .deleteData{
   padding: 7px 20px;
@@ -166,11 +172,7 @@ header{
   border-radius: 5px;
   font-weight: bolder;
   cursor: pointer;
-}
-.deleteData:hover{
-  background-color: rgb(206, 120, 16);
-  color: aliceblue;
-  transition: all 0.5s;
+  background-color: #CD853F;
 }
 
 /* -----------------------page-2---------------------------------- */

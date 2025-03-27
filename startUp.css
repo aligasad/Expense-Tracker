@@ -90,6 +90,9 @@ header{
       }
     }
   }
+  .dataDiv{
+    border-left: 8px solid #D2B48C;
+  }
 }
 
 /* ----------------------page1------------------------------------- */
@@ -139,9 +142,11 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: cadetblue;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow:  0 0 10px #414040;
+  border-left: 8px solid #3CB371;
 }
 
 .edit{
@@ -152,9 +157,10 @@ header{
   font-weight: bolder;
   margin-right: 20px;
   cursor: pointer;
+  background-color: #3CB371;
 }
-.edit:hover{
-  background-color: rgb(206, 120, 16);
+.edit:hover, .deleteData:hover{
+  background-color: #236541;
   color: aliceblue;
   transition: all 0.5s;
 }
@@ -165,11 +171,7 @@ header{
   border-radius: 5px;
   font-weight: bolder;
   cursor: pointer;
-}
-.deleteData:hover{
-  background-color: rgb(206, 120, 16);
-  color: aliceblue;
-  transition: all 0.5s;
+  background-color: #3CB371;
 }
 
 /* -----------------------page-2---------------------------------- */
