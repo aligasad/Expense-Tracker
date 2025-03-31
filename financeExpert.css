@@ -115,7 +115,7 @@
   border-bottom-left-radius: 10px;
   position: absolute;
   top: 36%;
-  left: 29%;
+  left: 25 %;
   transform: translate(-30%, -30%);
 
   
@@ -142,8 +142,8 @@
 }
 
 .container2{
-  width: 350px;
-  height: 450px;
+  width: 320px;
+  height: 420px;
   box-shadow: 0 0 5px;
   position: absolute;
   background-color: white;

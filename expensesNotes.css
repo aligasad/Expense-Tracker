@@ -164,12 +164,18 @@ body{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.close:hover{
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(50, 50, 43), rgb(0, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .para{
   font-size: 0.8rem;
 }
 
 #notesContainer{
+  margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: start;

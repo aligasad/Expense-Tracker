@@ -11,7 +11,6 @@ const form1 = document.querySelector("#form1"); // Login Page
 const form2 = document.querySelector("#form2"); // SignIn Page
 
 const signUp = document.querySelector("#signUp"); 
-
 const login = document.querySelector("#login");
 
 const middleDiv = document.querySelector("#midDiv"); // for UI
@@ -33,19 +32,13 @@ arrInfo = localStorage.getItem("userInfo") !== null ? JSON.parse(localStorage.ge
 
 signUp.addEventListener("click", () => {
   signUpPage.style.display = "block";
-
   loginPage.style.display = "none";
 });
 
 login.addEventListener('click', ()=>{
   signUpPage.style.display = "none";
-
   loginPage.style.display = "block";
 })
-
-// closeLoginPage.addEventListener("click", () => {
-//   loginPage.style.display = "none";
-// });
 
 form2.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -56,28 +49,25 @@ form2.addEventListener("submit", (e) => {
     username: formElem2[3].value,
     password: formElem2[4].value,
   };
-
-  console.log(obj);
-
+  // console.log(obj);
   let flag = true;
   arrInfo.forEach((intObj) => {
     if (obj.username === intObj.username && obj.password === intObj.password) {
       flag = false;
     }
   });
-  console.log(flag);
+  // console.log(flag);
 
   if (flag === true) {
     arrInfo.push(obj);
     localStorage.setItem("userInfo", JSON.stringify(arrInfo));
     alert("SignUp Sucessfully! Please Login.");
     loginPage.style.display = "block";
-
     flag = false;
-  } else {
+  } 
+  else {
     alert(
-      "This email ID is already registered. Go to Login."
-    );
+      "This email ID is already registered. Go to Login.");
   }
 
   signUpPage.style.display = "none";

@@ -6,6 +6,19 @@ const elements = Array.from(document.forms[0].elements);
 let myChart = null;
 let uniqueId = 1;
 
+
+// when you once logout and again add item after login then the id will be again start from 1 so we update the id using this code
+
+if(leaderBoard.length >= 1){
+  leaderBoard.forEach((obj)=>{
+    if(obj.id >= uniqueId){
+      uniqueId = obj.id + 1;
+      console.log("ID",obj.id);
+    }
+    console.log(uniqueId)
+  });
+}
+
 window.addEventListener("load",()=>{
    printLeaderBoard();
    showGraph();
@@ -48,6 +61,7 @@ function printLeaderBoard() {
     const para = document.createElement("p");
     para.innerText = `${obj.name}: ${obj.amount} ${obj.item}`;
     const rightDiv = document.createElement("div");
+    rightDiv.classList.add("rightDiv");
     const edit = document.createElement("button");
     edit.innerText = "Edit";
     edit.classList.add("edit");
@@ -169,11 +183,11 @@ function darkMode() {
 }
 
 
-// ------------DELETE ALL NOTES---------------------------
+// ------------DELETE ALL NOTES-------------------------------------------------------
 const deleteAllData = document.querySelector("#deleteAll");
 
 deleteAllData.addEventListener('click', ()=>{
-  alert("Are you sure you want to delete all expenses?");
+  alert("Are you sure you want to delete all expenses?")
   // deleting all data from localStorege
   leaderBoard = [];
   // pushing empty array to localStorage

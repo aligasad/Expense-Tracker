@@ -85,3 +85,17 @@ header{
   border: 0;
 
 }
+
+
+/* -----------------------{ Media Query max-width: 768px}---------------------------------- */
+
+@media screen and (max-width: 768px) {
+  header{
+    .left{
+      display: block;
+    }
+  }
+  .sideBar{
+    display: none;
+  }
+}

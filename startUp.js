@@ -1,10 +1,21 @@
 const ctx = document.getElementById('myChart');
 let myChart = null;
 let uniqueId = 1;
+let CompanyLeadBoard = localStorage.getItem("CompanyLeadBoard") ? JSON.parse(localStorage.getItem("CompanyLeadBoard")) : [];
+
+// when you once logout and again add item after login then the id will be again start from 1 so we update the id using this code
+if(CompanyLeadBoard.length >= 1){
+  CompanyLeadBoard.forEach((obj)=>{
+    if(obj.id >= uniqueId){
+      uniqueId = obj.id + 1;
+      console.log("ID",obj.id);
+    }
+    console.log(uniqueId)
+  });
+}
 
 const form = document.querySelector('form');
 const dataContainer = document.querySelector("#dataContainer");
-let CompanyLeadBoard = localStorage.getItem("CompanyLeadBoard") ? JSON.parse(localStorage.getItem("CompanyLeadBoard")) : [];
 const elements = Array.from(document.forms[0].elements);
 
 window.addEventListener("load", ()=>{

@@ -73,7 +73,7 @@ body{
 
   .left{
     button{
-      padding: 5px 15px;
+      padding: 8px 15px;
       border-radius: 5px;
       border: none;
       font-size: 1.3rem;
@@ -82,7 +82,7 @@ body{
     }
     button:hover{
       border: 2px solid black;
-      padding: 3px 13px;
+      padding: 6px 13px;
       background-color: #00999f;
       color: black;
 
@@ -110,8 +110,10 @@ body{
         height: 20px;
         border-radius: 15px;
         cursor: pointer;
-        background-color: #DC143C;
-        box-shadow: inset 0px 0px 8px #000;
+        box-shadow: inset 1px 1px 8px #000, inset -1px -1px 8px #000;
+      }
+      #circle:hover{
+        background-color: yellow;
       }
     }
 }
@@ -120,7 +122,7 @@ body{
 
   #signUpLogin{
     width: 160px;
-    padding: 3px 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,7 +156,14 @@ body{
 .toggle{
   justify-content: end;
   transition: justify-content 1s;
+  background-color: greenyellow;
+  #circle{
+    background-color: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 8px #ffffff;
+  }
 }
+
+
 
 .dark-mode {
   #midDiv{
@@ -242,6 +251,7 @@ body{
       margin-top: 10px;
       transition: background-color 0.5s;
       box-shadow: 0px 0px 5px #000;
+      cursor: pointer;
     }
     input:hover{
       border-color: blue;
@@ -345,5 +355,85 @@ body{
     background-color: rgba(255, 255, 255, 0.741);
     color: #000;
     transition: all 0.5s;
+  }
+}
+
+
+/* -----------------------{ Media Query max-width: 768px}---------------------------------- */
+
+@media screen and (max-width: 768px) {
+  #header{
+    padding: 8px 30px;
+    border-bottom-right-radius:30px;
+    border-bottom-left-radius: 30px;
+    .left{
+      button{
+        padding: 3px 7px;
+        font-size: 1rem;
+      }
+      button:hover{
+        padding: 1px 5px;
+      }
+    }
+
+    .right{
+      width: 35vw;
+    
+      #toggle{
+        width:  56px;
+        height: 25px;
+        #circle{
+          width:  17px;
+          height: 17px;
+        }
+      }
+
+      #signUpLogin{
+        width: 60px;
+        padding:3px 10px;
+    
+        .sign{
+          font-size: 0.5rem;
+        }
+        .arrow{
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+
+  
+
+  #midDiv{
+    width: 90vw;
+    height: 220px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: inset 0px 0px 5px #000, -1px -1px 5px #000;
+  
+    h1{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 400;
+    }
+    button{
+      padding: 10px 35px;
+      border: 2px solid #cb5902;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #cb590277;
+      color: white;
+    }
+    button:hover{
+      background-color: rgba(255, 255, 255, 0.741);
+      color: #000;
+      transition: all 0.5s;
+    }
   }
 }
