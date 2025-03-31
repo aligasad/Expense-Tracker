@@ -168,3 +168,48 @@ header{
 .loading{
     filter: drop-shadow(2px 2px 2px black);
 }
+
+
+/* -----------------------{ Media Query max-width: 768px}---------------------------------- */
+
+@media screen and (max-width: 768px) {
+    header{
+        padding: 7px 10px;
+        background-color: rgb(179, 0, 75);
+    
+        .left{
+            select{
+                width: 80px;
+                outline: none;
+            }
+        }
+    
+        .right{
+            column-gap: 10px;
+            button{
+                font-size: 0.8rem;
+                padding:4px;
+            }
+            i{
+                display: none;
+            }
+        }
+    }
+
+    .container{
+        height: calc(100vh - 100px);
+    }
+    .prompt-area{
+        height: 50px;
+        position: fixed;
+        bottom: 5%;
+
+        .prompt{
+            height: 40px;
+        }
+        .btn{
+            width: 15%;
+            height: 44px;
+        }
+    }
+}

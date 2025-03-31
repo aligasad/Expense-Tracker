@@ -14,24 +14,21 @@ header{
   padding: 20px 30px;
   background-color: teal;
 
-  .left{
-    width: 20vw;
-    .top{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-right: 70px;
-  
-      .fa-xmark{
-        cursor: pointer;
-      }
-    }
+  .top{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 
-    #bars{
-      display: none;
+    .fa-xmark{
       cursor: pointer;
     }
-    
+  }
+
+  #bars{
+    display: none;
+    cursor: pointer;
   }
 
   #logOut{
@@ -91,11 +88,50 @@ header{
 
 @media screen and (max-width: 768px) {
   header{
-    .left{
+    .top{
+      display: none;
+      width: 125px;
+    }
+    #bars{
       display: block;
     }
   }
+
+  #main{
+    display: flex;
+  }
+  
   .sideBar{
+    width: 50vw;
     display: none;
+    position: absolute;
+    height: calc(100vh - 61.33px);
+    
+  
+    .bottom{
+      padding: 10px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 18px;
+  
+      button{
+        width: 140px;
+        font-size: 0.7rem;
+      }
+      button:hover{
+        transform: scale(1.1);
+        background-color: #F5DEB3;
+      }
+    }
+  }
+  
+  .contentBar{
+    flex: 1;
+    width: 100vw;
+    height: calc(100vh - 68px);
+    border: 0;
+  
   }
 }

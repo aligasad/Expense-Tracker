@@ -12,12 +12,10 @@
   </head>
   <body>
     <header>
-      <div class="left">
-        <i class="fa-solid fa-bars" id="bars"></i>
-        <div class="top">
-          <h4>Menu</h4>
-          <i class="fa-solid fa-xmark" id="cross"></i>
-        </div>
+      <i class="fa-solid fa-bars" id="bars"></i>
+      <div class="top">
+        <h4>Menu</h4>
+        <i class="fa-solid fa-xmark" id="cross"></i>
       </div>
       <div class="right"><h3 id="logOut">Logout</h3></div>
     </header>
@@ -53,20 +51,20 @@
        
       logOut.innerHTML = loginUsername + ` <i class="fa-solid fa-right-from-bracket"></i>`;
 
-      logOut.addEventListener('click', ()=>{
+      logOut.addEventListener('click', () => {
         window.location.href = 'index.html';
         localStorage.removeItem("loginId");
       })
 
       
       
-      cross.addEventListener('click', ()=>{
+      cross.addEventListener('click', () => {
         sideBar.style.display = "none";
         bars.style.display = "block";
         t.style.display = 'none';
       });
        
-      bars.addEventListener('click', ()=>{
+      bars.addEventListener('click', () => {
         sideBar.style.display = "block";
         t.style.display = 'flex';
         bars.style.display = "none";
